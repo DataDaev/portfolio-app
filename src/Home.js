@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Profile from "./assets/Profile.jpg";
+import PortfolioData from "./Data/PortfolioData";
+import PortfolioItem from "./PortfolioItem";
 
 export default function Home() {
   return (
@@ -28,6 +30,20 @@ export default function Home() {
         </div>
 
         <img className="profile" src={Profile} alt="Profile of Davis Tran" />
+      </div>
+      <div>
+        <h1>Portfolio</h1>
+        <div>
+          {PortfolioData.map((project) => (
+            <PortfolioItem
+              imgUrl={project.imgUrl}
+              title={project.title}
+              stack={project.stack}
+              link={project.link}
+              description={project.description}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
