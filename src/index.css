@@ -18,6 +18,18 @@ li {
   list-style-type: none;
 }
 
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
 .app {
   display: flex;
   justify-content: center;
@@ -28,20 +40,49 @@ li {
 }
 
 .home-container {
-  margin: 4em 4em;
+  margin: 0 4em;
+}
+
+.navigation-container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .navigation {
+  background-color: white;
+  position: absolute;
+  width: 100vh;
   display: flex;
   justify-content: space-between;
-  /* margin: 2em 6em; */
   padding: 0 4em;
+  transition: transform 1s ease;
+}
+
+.navigation.active {
+  transform: translateY(-100%);
+}
+
+.navigation button {
+  background: transparent;
+  border: none;
+}
+
+.logo {
+  cursor: pointer;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 3em;
+}
+
+.nav-links button:hover {
+  color: lightskyblue;
+  cursor: pointer;
 }
 
 .dropdown .content {
@@ -68,17 +109,10 @@ li {
   padding: 14px 0px;
 }
 
-.nav-links li:hover {
-  color: lightskyblue;
-  cursor: pointer;
-}
-
 .summary {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   gap: 4em;
-  margin: 5em 0;
-  padding: 10em 0;
 }
 
 .summary-buttons {
@@ -121,13 +155,64 @@ li {
   box-shadow: 5px 5px 15px 5px gray;
 }
 
+.projects-section {
+  display: flex;
+  justify-content: start;
+  padding: 5em 0;
+}
+
 .project-image {
   width: 20em;
   border: 1px solid black;
+}
+
+.project-image:focus {
+  border: 2px solid black;
 }
 
 .project-item {
   display: flex;
   gap: 4em;
   margin: 5em 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 25em;
+}
+
+.contact-name,
+.contact-email,
+.contact-message {
+  padding: 1em;
+  background: transparent;
+  border: 2px solid gray;
+  border-radius: 0.5em;
+}
+
+.contact-form button {
+  text-align: center;
+  display: inline-block;
+  padding: 1em 0.5em;
+  width: 12em;
+  box-shadow: 2px 2px 4px black;
+  background: linear-gradient(to right, teal, blue);
+  color: white;
+  cursor: pointer;
+  font-size: medium;
+  border-radius: 0.5em;
+}
+
+.projects {
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
 }

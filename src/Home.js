@@ -2,11 +2,12 @@ import { Link } from "react-router-dom";
 import Profile from "./assets/Profile.jpg";
 import PortfolioData from "./Data/PortfolioData";
 import PortfolioItem from "./PortfolioItem";
+import Contact from "./Contact";
 
-export default function Home() {
+export default function Home({ projectsRef, contactRef, profileRef }) {
   return (
     <div className="home-container">
-      <div className="summary">
+      <section ref={profileRef} className="summary">
         <div>
           <h1>Hello, my name is Davis Tran, a developer based in Arizona</h1>
           <p>
@@ -28,10 +29,10 @@ export default function Home() {
             </Link>
           </div>
         </div>
-
         <img className="profile" src={Profile} alt="Profile of Davis Tran" />
-      </div>
-      <div>
+      </section>
+
+      <section ref={projectsRef} className="projects-section">
         <h1>Portfolio</h1>
         <div>
           {PortfolioData.map((project) => (
@@ -44,7 +45,11 @@ export default function Home() {
             />
           ))}
         </div>
-      </div>
+      </section>
+
+      <section ref={contactRef}>
+        <Contact />
+      </section>
     </div>
   );
 }

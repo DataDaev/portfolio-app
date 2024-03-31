@@ -10,7 +10,7 @@ export default function PortfolioItem({
 }) {
   return (
     <div className="project-item">
-      <Link to="">
+      <Link to={link}>
         <img className="project-image" src={imgUrl} alt="Portfolio" />
       </Link>
       <div>
