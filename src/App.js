@@ -5,7 +5,6 @@ import Home from "./Home";
 import ProjectOne from "./ProjectOne";
 import ProjectTwo from "./ProjectTwo";
 import ProjectThree from "./ProjectThree";
-import Contact from "./Contact";
 import ProjectFour from "./ProjectFour";
 
 function App() {

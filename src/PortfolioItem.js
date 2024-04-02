@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import PortfolioData from "./Data/PortfolioData";
 
 export default function PortfolioItem({
   title,
