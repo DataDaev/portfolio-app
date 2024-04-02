@@ -23,4 +23,12 @@ export default [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
+  {
+    title: "Placeholder 4",
+    imgUrl: "https://placebear.com/640/360",
+    stack: ["HTML ", "CSS ", "JavaScript"],
+    link: "/portfolio-app/placeholder4",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
 ];

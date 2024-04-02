@@ -8,8 +8,8 @@ export default function Home({ projectsRef, contactRef, profileRef }) {
   return (
     <div className="home-container">
       <section ref={profileRef} className="summary">
-        <div>
-          <h1>Hello, my name is Davis Tran, a developer based in Arizona</h1>
+        <div className="summary-text">
+          <h1>Hello, my name is Davis</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -34,7 +34,7 @@ export default function Home({ projectsRef, contactRef, profileRef }) {
 
       <section ref={projectsRef} className="projects-section">
         <h1>Portfolio</h1>
-        <div>
+        <div className="projects-grid">
           {PortfolioData.map((project) => (
             <PortfolioItem
               imgUrl={project.imgUrl}

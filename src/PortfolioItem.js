@@ -13,9 +13,9 @@ export default function PortfolioItem({
       <Link to={link}>
         <img className="project-image" src={imgUrl} alt="Portfolio" />
       </Link>
-      <div>
+      <div className="project-information">
         <h3>{title}</h3>
-        <p>
+        <p className="project-stack">
           {stack.map((item) => (
             <span>{item}</span>
           ))}

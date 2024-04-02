@@ -21,7 +21,7 @@ export default function Navigation({ projectsRef, contactRef, profileRef }) {
   return (
     <div className="navigation-container">
       <div className={navbar ? "navigation active" : "navigation"}>
-        <Link to="/portfolio-app/">
+        <Link to="/">
           <button
             onClick={() =>
               profileRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -46,23 +46,17 @@ export default function Navigation({ projectsRef, contactRef, profileRef }) {
               </button>
 
               <div className="content">
-                <Link
-                  to="/portfolio-app/placeholder1"
-                  className="dropdown-link"
-                >
+                <Link to="/placeholder1" className="dropdown-link">
                   Placeholder 1
                 </Link>
-                <Link
-                  to="/portfolio-app/placeholder2"
-                  className="dropdown-link"
-                >
+                <Link to="/placeholder2" className="dropdown-link">
                   Placeholder 2
                 </Link>
-                <Link
-                  to="/portfolio-app/placeholder3"
-                  className="dropdown-link"
-                >
+                <Link to="/placeholder3" className="dropdown-link">
                   Placeholder 3
+                </Link>
+                <Link to="/placeholder4" className="dropdown-link">
+                  Placeholder 4
                 </Link>
               </div>
             </div>
